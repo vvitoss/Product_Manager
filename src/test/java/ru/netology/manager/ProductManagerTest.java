@@ -11,13 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ProductManagerTest {
 
-    private Repository repo = new Repository();
-    private ProductManager manager = new ProductManager(repo);
-    private Product book1 = new Book(1, "В нутри убийцы", 120, "Майк Омер");
-    private Product book2 = new Book(2, "Тьма", 150, "Джон Маррс");
-    private Product book3 = new Book(3, "Кто живет в лесу", 180, "Василий Фидеенко");
-    private Product smartphone1 = new Smartphone(4, "Galaxy S21", 8500, "Samsung");
-    private Product smartphone2 = new Smartphone(5, "Redmi 5+", 3500, "Xiaomi");
+    private final Repository repo = new Repository();
+    private final ProductManager manager = new ProductManager(repo);
+    private final Product book1 = new Book(1, "В нутри убийцы", 120, "Майк Омер");
+    private final Product book2 = new Book(2, "Тьма", 150, "Джон Маррс");
+    private final Product book3 = new Book(3, "Тьма", 180, "Стивен Кинг");
+    private final Product smartphone1 = new Smartphone(4, "Galaxy S21", 8500, "Samsung");
+    private final Product smartphone2 = new Smartphone(5, "Redmi 5+", 3500, "Xiaomi");
 
 
     @Test
@@ -69,7 +69,7 @@ class ProductManagerTest {
         manager.add(smartphone1);
         manager.add(smartphone2);
 
-        String name = "Красный";
+        String name = "В нутри убийцы";
 
         Product[] expected = {book1};
         Product[] actual = manager.searchBy(name);
@@ -84,7 +84,7 @@ class ProductManagerTest {
         manager.add(smartphone1);
         manager.add(smartphone2);
 
-        String name = "Синий";
+        String name = "Тьма";
 
         Product[] expected = {book2, book3};
         Product[] actual = manager.searchBy(name);

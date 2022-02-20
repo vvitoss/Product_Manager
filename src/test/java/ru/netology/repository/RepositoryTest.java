@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class RepositoryTest {
 
-    private Repository repo = new Repository();
-    private Product book1 = new Book(1, "В нутри убийцы", 120, "Майк Омер");
-    private Product book2 = new Book(2, "Тьма", 150, "Джон Маррс");
-    private Product book3 = new Book(3, "Кто живет в лесу", 180, "Василий Фидеенко");
-    private Product smartphone1 = new Smartphone(4, "Galaxy S21", 8500, "Samsung");
-    private Product smartphone2 = new Smartphone(5, "Redmi 5+", 3500, "Xiaomi");
+    private final Repository repo = new Repository();
+    private final Product book1 = new Book(1, "В нутри убийцы", 120, "Майк Омер");
+    private final Product book2 = new Book(2, "Тьма", 150, "Джон Маррс");
+    private final Product book3 = new Book(3, "Кто живет в лесу", 180, "Василий Фидеенко");
+    private final Product smartphone1 = new Smartphone(4, "Galaxy S21", 8500, "Samsung");
+    private final Product smartphone2 = new Smartphone(5, "Redmi 5+", 3500, "Xiaomi");
 
     @Test
     public void saveOneBook() {
